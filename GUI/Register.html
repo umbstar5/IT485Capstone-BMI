@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html class="background_1">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="main.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="main.js"></script>
+
+</head>
+<body>
+
+<!--Mobile-->
+<header class="shadow anchor15">
+  <img src="../Imgs/logotop.jpg" class="logo_top">
+  <div class="anchor15 button2_location">
+  <button class="hamburger hamburger--collapse" onclick="toggle2()">
+  <div class="hamburger-box">
+  <div class="hamburger-inner">
+  </button>
+  </div>
+
+</header>
+
+<ul class="shadow anchor16 topnav topnav_hide">
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="../BMI Form/BMI Form.html">BMI Form</a></li>
+  <li><a href="../UMBHealthNewsletter.html">UMB Health News Letter/Recommendation </a></li>
+  <li><a href="../us/us.html">About Us</a></li>
+</ul>
+
+<!--Desktop-->
+<div class="anchor11 sidenav_show">
+  <div class="anchor16 sidetop sidetop_hide shadow">
+  <img src="../Imgs/logotop.jpg" class="logo_sidetop">
+  </div>
+
+  <header class="anchor16 shadow">
+  <img src="../Imgs/logo.jpg" class="logo">
+  </header>
+
+  <div class="anchor14 button3_maxim bring_to_front">
+  <button class="hamburger hamburger--collapse is-active" onclick="toggle1()">
+    <div class="hamburger-box">
+      <div class="hamburger-inner">
+  </button>
+  </div>
+
+<ul class="anchor12 sidenav shadow">
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="../BMI Form/BMI Form.html">BMI Form</a></li>
+  <li><a href="../UMBHealthNewsletter.html">UMB Health News Letter/Recommendation </a></li>
+  <li><a href="../us/us.html">About Us</a></li>
+</ul>
+</div>
+
+<div class="anchor13 content content_minim content_top">
+	
+<div class="fa_container">
+<a href="https://www.instagram.com/explore/locations/121374699/UMB website/"><i class="fa fa-instagram"></i></a>
+<a href="https://twitter.com/UMB website"><i class="fa fa-twitter"></i></a>
+<a href="https://www.linkedin.com/company/UMB website"> <i class="fa fa-linkedin"></i></a>
+<a href="https://www.facebook.com/UMB website"> <i class="fa fa-facebook"></i></a>
+</div>
+
+ <!-- Enter your code here-->
+ <!-- When you start coding erase all code within this area.-->
+<p>
+<form  action="login.php" autocomplete="on"> 
+     <h1>Log in</h1> 
+     <p> 
+          <label for="username" class="uname" data-icon="u" >Username:</label>
+          <input id="username" name="username" required="required" type="text" placeholder="Username"/>
+     </p>
+     <p> 
+          <label for="password" class="youpasswd" data-icon="p">Password:</label>
+          <input id="password" name="password" required="required" type="password" placeholder="Password" /> 
+     </p>
+     <p class="keeplogin"> 
+          <input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" /> 
+          <label for="loginkeeping">Keep me logged in</label>
+     </p>
+     <p class="login button"> 
+          <input type="submit" value="Login" /> 
+     </p>
+</form>
+</p>
+
+<form  action="register.php" autocomplete="on"> 
+    <h1> Sign up </h1> 
+    <p> 
+         <label for="firstnamesignup" class="fname" data-icon="u">First Name:</label>
+         <input id="firstnamesignup" name="firstnamesignup" required="required" type="text" placeholder="First" />
+    </p>
+    <p> 
+         <label for="lastnamesignup" class="lname" data-icon="u">Last Name:</label>
+         <input id="lastnamesignup" name="lastnamesignup" required="required" type="text" placeholder="Last" />
+    </p>
+    <p> 
+         <label for="usernamesignup" class="uname" data-icon="u">Username:</label>
+         <input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="Username" />
+    </p>
+    <p> 
+         <label for="passwordsignup" class="youpasswd" data-icon="p">Password:</label>
+         <input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="Password"/>
+    </p>
+    <p> 
+         <label for="passwordsignup_confirm" class="password" data-icon="p">Confirm Password:</label>
+         <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="Password"/>
+    </p>
+    <p> 
+         <label for="emailsignup" class="youmail" data-icon="e" >Email:</label>
+         <input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="example@domain.com"/> 
+    </p>
+    <p> 
+         <label>Date of Birth:</label>
+         <select name="month" onChange="changeDate(this.options[selectedIndex].value);">
+         <option value="na">Month</option>
+         <option value="1">Jan</option>
+         <option value="2">Feb</option>
+         <option value="3">Mar</option>
+         <option value="4">Apr</option>
+         <option value="5">May</option>
+         <option value="6">June</option>
+         <option value="7">July</option>
+         <option value="8">Aug</option>
+         <option value="9">Sept</option> 
+         <option value="10">Oct</option>
+         <option value="11">Nov</option>
+         <option value="12">Dec</option>
+         
+         </select>
+         <select name="day" id="day">
+         <option value="na">Day</option>
+         </select>
+         <select name="year" id="year">
+         <option value="na">Year</option>
+         </select>
+         
+         <script language="JavaScript" type="text/javascript">
+         function changeDate(i){
+         var e = document.getElementById('day');
+         while(e.length>0)
+         e.remove(e.length-1);
+         var j=-1;
+         if(i=="na")
+         k=0;
+         else if(i==2)
+         k=28;
+         else if(i==4||i==6||i==9||i==11)
+         k=30;
+         else
+         k=31;
+         while(j++<k){
+         var s=document.createElement('option');
+         var e=document.getElementById('day');
+         if(j==0){
+         s.text="Day";
+         s.value="na";
+         try{
+         e.add(s,null);}
+         catch(ex){
+         e.add(s);}}
+         else{
+         s.text=j;
+         s.value=j;
+         try{
+         e.add(s,null);}
+         catch(ex){
+         e.add(s);}}}}
+         y = 1998;
+         while (y-->1908){
+         var s=document.createElement('option');
+         var e=document.getElementById('year');
+         s.text=y;
+         s.value=y;
+         try{
+         e.add(s,null);}
+         catch(ex){
+         e.add(s);}}
+         </script> 
+    </p>
+    <p> 
+         <label>Gender:</label>
+         <select name="Gender">
+         <option value="male">Male</option>
+         <option value="female">Female</option>
+         </select>
+    </p>
+    <p class="signin button"> 
+    <input type="submit" value="Register"/> 
+    </p>
+</form>
+
